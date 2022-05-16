@@ -20,5 +20,9 @@ class MainActivity : AppCompatActivity() {
         btnToast.setOnClickListener {
             Toast.makeText(this, "wow", Toast.LENGTH_SHORT).show()
         }
+        btnVariable.setOnClickListener {
+            var name1 : String = "String"
+            val name2 : String = "String too"
+        }
     }
 }
