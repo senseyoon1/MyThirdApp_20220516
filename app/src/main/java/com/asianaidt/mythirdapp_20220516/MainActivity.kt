@@ -30,6 +30,26 @@ class MainActivity : AppCompatActivity() {
             startActivity(myIntent)
         }
 
+        btnSendText.setOnClickListener {
+            val inputPhoneNumber = edtPhoneNumber.text.toString()
+            val myUri = Uri.parse("smsto:${inputPhoneNumber}")
+
+            val myIntent = Intent(Intent.ACTION_SENDTO, myUri)
+            myIntent.putExtra("sms_body", "문자를 보낼거예여")
+            startActivity(myIntent)
+        }
+
+        btnNaverWebLink.setOnClickListener {
+            val myUri = Uri.parse("https://www.naver.com")
+            val myIntent = Intent(Intent.ACTION_VIEW, myUri)
+            startActivity(myIntent)
+        }
+
+        btnKakaoPlayStore.setOnClickListener {
+            val myUri = Uri.parse("market://details?id=com.kakao.talk")
+            val myIntent = Intent(Intent.ACTION_VIEW, myUri)
+            startActivity(myIntent)
+        }
     }
 
 /*
