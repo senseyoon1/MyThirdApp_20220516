@@ -14,42 +14,6 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
-        btnDial.setOnClickListener {
-            val inputPhoneNumber = edtPhoneNumber.text.toString()
-            val myUri = Uri.parse("tel:${inputPhoneNumber}")
-
-            val myIntent = Intent(Intent.ACTION_DIAL, myUri)
-            startActivity(myIntent)
-        }
-
-        btnCall.setOnClickListener {
-            val inputPhoneNumber = edtPhoneNumber.text.toString()
-            val myUri = Uri.parse("tel:${inputPhoneNumber}")
-
-            val myIntent = Intent(Intent.ACTION_CALL, myUri)
-            startActivity(myIntent)
-        }
-
-        btnSendText.setOnClickListener {
-            val inputPhoneNumber = edtPhoneNumber.text.toString()
-            val myUri = Uri.parse("smsto:${inputPhoneNumber}")
-
-            val myIntent = Intent(Intent.ACTION_SENDTO, myUri)
-            myIntent.putExtra("sms_body", "문자를 보낼거예여")
-            startActivity(myIntent)
-        }
-
-        btnNaverWebLink.setOnClickListener {
-            val myUri = Uri.parse("https://www.naver.com")
-            val myIntent = Intent(Intent.ACTION_VIEW, myUri)
-            startActivity(myIntent)
-        }
-
-        btnKakaoPlayStore.setOnClickListener {
-            val myUri = Uri.parse("market://details?id=com.kakao.talk")
-            val myIntent = Intent(Intent.ACTION_VIEW, myUri)
-            startActivity(myIntent)
-        }
     }
 
 /*
