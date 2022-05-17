@@ -5,28 +5,28 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    tools:context=".MainActivity">
+    tools:context=".EditActivity">
 
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
         >
-        <TextView
-            android:id="@+id/txtNickname"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:textSize="17dp"
-            android:text="senseyoon" />
-        <TextView
+        <EditText
+            android:id="@+id/edtNickname"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_weight="1"
             />
         <Button
-            android:id="@+id/btnEditNickname"
+            android:id="@+id/btnOk"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="닉네임 변경하기" />
+            android:text="OK" />
     </LinearLayout>
+
+
+
+
+
 </LinearLayout>
