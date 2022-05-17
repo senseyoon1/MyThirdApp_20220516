@@ -12,7 +12,9 @@
     <ListView
         android:id="@+id/studentListView"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"/>
+        android:layout_height="match_parent"
+        tools:listitem="@layout/student_list_item"
+        />
     <!--<EditText
         android:id="@+id/edtPhoneNumber"
         android:layout_width="match_parent"
