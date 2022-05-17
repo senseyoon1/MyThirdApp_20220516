@@ -2,30 +2,28 @@ package com.asianaidt.mythirdapp_20220516
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import com.asianaidt.mythirdapp_20220516.adapters.StudentAdapter
-import com.asianaidt.mythirdapp_20220516.data.Student
+import com.asianaidt.mythirdapp_20220516.adapters.EstateAdapter
+import com.asianaidt.mythirdapp_20220516.data.Estate
 import kotlinx.android.synthetic.main.activity_main.*
 
 class MainActivity : AppCompatActivity() {
 
-    val mStudentList = ArrayList<Student>()
-    lateinit var mAdapter : StudentAdapter
+    val mEstateList = ArrayList<Estate>()
+    lateinit var mAdapter : EstateAdapter
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
-        mStudentList.add(Student("윤종원",1985, "서울시 강서구"))
-        mStudentList.add(Student("김배영영",1985,"서울시 강남구"))
-        mStudentList.add(Student("송민규",1985, "서울시 강동구"))
-        mStudentList.add(Student("유태수",1985, "서울시 강북구"))
-        mStudentList.add(Student("양혜지",1985, "서울시 중구"))
-        mStudentList.add(Student("방가희",1985, "서울시 동대문구"))
-        mStudentList.add(Student("오하늬",1985, "서울시 서대문구"))
-        mStudentList.add(Student("허성원",1985, "서울시 종로구"))
+        mEstateList.add(Estate(150000,"서울시 서초구 서초동", "떨이", -2))
+        mEstateList.add(Estate(1500,"서울시 서초구 서초동", "떨이", -1))
+        mEstateList.add(Estate(15000,"서울시 서초구 서초동", "떨이", 0))
+        mEstateList.add(Estate(150000,"서울시 서초구 서초동", "떨이", 2))
+        mEstateList.add(Estate(150000,"서울시 서초구 서초동", "떨이", 1))
+        mEstateList.add(Estate(150000,"서울시 서초구 서초동", "떨이", 16))
 
-        mAdapter = StudentAdapter(this, R.layout.student_list_item, mStudentList)
-        studentListView.adapter = mAdapter
+        mAdapter = EstateAdapter(this, R.layout.estate_list_item, mEstateList)
+        estateListView.adapter = mAdapter
 
 
     }
