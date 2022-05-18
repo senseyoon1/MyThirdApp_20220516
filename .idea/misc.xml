@@ -3,9 +3,13 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
+        <entry key="..\:/Users/yoonjw/AndroidStudioProjects/MyThirdApp_20220516/app/src/main/res/layout/activity_detail.xml" value="0.176" />
         <entry key="..\:/Users/yoonjw/AndroidStudioProjects/MyThirdApp_20220516/app/src/main/res/layout/activity_login.xml" value="0.1296875" />
         <entry key="..\:/Users/yoonjw/AndroidStudioProjects/MyThirdApp_20220516/app/src/main/res/layout/activity_main.xml" value="0.2" />
         <entry key="..\:/Users/yoonjw/AndroidStudioProjects/MyThirdApp_20220516/app/src/main/res/layout/activity_other.xml" value="0.4" />
+        <entry key="..\:/Users/yoonjw/AndroidStudioProjects/MyThirdApp_20220516/app/src/main/res/layout/activity_splash.xml" value="0.25364583333333335" />
+        <entry key="..\:/Users/yoonjw/AndroidStudioProjects/MyThirdApp_20220516/app/src/main/res/layout/estate_list_item.xml" value="0.2" />
+        <entry key="..\:/Users/yoonjw/AndroidStudioProjects/MyThirdApp_20220516/app/src/main/res/layout/student_list_item.xml" value="0.4" />
       </map>
     </option>
   </component>

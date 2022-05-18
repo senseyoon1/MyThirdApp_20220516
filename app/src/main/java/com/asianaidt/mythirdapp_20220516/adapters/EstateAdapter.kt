@@ -27,12 +27,11 @@ class EstateAdapter(
         val txtPrice = row.findViewById<TextView>(R.id.price)
         val txtAddress = row.findViewById<TextView>(R.id.address)
         val txtDescription = row.findViewById<TextView>(R.id.description)
-        val txtFloorInfo = row.findViewById<TextView>(R.id.floorInfo)
 
-        txtPrice.text = data.convertPriceString()
-        txtFloorInfo.text = data.getFloorInfo()
+
+        txtPrice.text = data.getPriceString()
         txtAddress.text = data.address
-        txtDescription.text = data.description
+        txtDescription.text = "${data.description}, ${data.getFloorInfo()}"
 
         return row
     }

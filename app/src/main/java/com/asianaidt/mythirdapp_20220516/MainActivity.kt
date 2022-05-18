@@ -1,12 +1,15 @@
 package com.asianaidt.mythirdapp_20220516
 
+import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.view.View
+import android.widget.AdapterView
 import com.asianaidt.mythirdapp_20220516.adapters.EstateAdapter
 import com.asianaidt.mythirdapp_20220516.data.Estate
 import kotlinx.android.synthetic.main.activity_main.*
 
-class MainActivity : AppCompatActivity() {
+class MainActivity : AppCompatActivity(), AdapterView.OnItemClickListener {
 
     val mEstateList = ArrayList<Estate>()
     lateinit var mAdapter : EstateAdapter
@@ -24,8 +27,15 @@ class MainActivity : AppCompatActivity() {
 
         mAdapter = EstateAdapter(this, R.layout.estate_list_item, mEstateList)
         estateListView.adapter = mAdapter
+        estateListView.onItemClickListener = this
 
 
+    }
+
+    override fun onItemClick(p0: AdapterView<*>?, p1: View?, p2: Int, p3: Long) {
+        val myIntent = Intent(this, DetailActivity::class.java)
+        myIntent.putExtra("estate", mEstateList[p2])
+        startActivity(myIntent)
     }
 
 /*
